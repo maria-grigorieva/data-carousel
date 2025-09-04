@@ -1,0 +1,12 @@
+.ipynb_checkpoints/
+data/
+config.ini
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv/
+.idea/
+*.sqlite3
+*.log
