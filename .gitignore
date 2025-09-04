@@ -1,12 +1,34 @@
-.ipynb_checkpoints/
-data/
-config.ini
+# Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+
+# Virtual environments
 .env
 .venv/
+
+# PyCharm
 .idea/
-*.sqlite3
+.ropeproject/
+
+# Jupyter
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# Data
+data/
+
+# Configs & secrets
+config.ini
+
+# Logs & DB
 *.log
+*.sqlite3
+
+# macOS
+.DS_Store
+
+# Testing / typing
+.pytest_cache/
+.mypy_cache/
