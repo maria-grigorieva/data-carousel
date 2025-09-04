@@ -99,7 +99,7 @@ class ESDownloader:
 
 if __name__ == "__main__":
     index_name = "atlas_prodsyslogs-*"
-    output_file = "data/results_sept2025.csv"
+    output_file = "data/prodsyslogs.csv"
 
     downloader = ESDownloader("config.ini")
     total = downloader.query_and_export(index_name, output_file)
