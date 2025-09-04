@@ -4,12 +4,12 @@
 
 Install Python dependencies:
 
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 
 
 Create a local data/ directory:
 
-mkdir -p data
+```mkdir -p data```
 
 
 Provide connection details in config.ini (see config.example.ini).
@@ -18,7 +18,7 @@ Provide connection details in config.ini (see config.example.ini).
 
 Run:
 
-python scripts/get_prodsyslogs.py
+```python scripts/get_prodsyslogs.py```
 
 
 This creates a CSV file (e.g., data/prodsyslogs.csv) containing flattened logs.
@@ -39,7 +39,7 @@ Provides visualizations of dataset activity
 
 Run:
 
-python scripts/requests_from_DEFT.py
+```python scripts/requests_from_DEFT.py```
 
 
 This script:
@@ -66,10 +66,12 @@ Can be reused inside scripts or notebooks.
 
 Example:
 
+```
 from DatasetParsing.hep_dataset_parser import HEPDatasetParser
 
 parser = HEPDatasetParser()
 df = parser.parse_dataset_column(df, column_name="dataset")
+```
 
 ## 📝 Notes
 
