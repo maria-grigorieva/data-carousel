@@ -1,5 +1,6 @@
-#🚀 Usage
-##1. Prepare Environment
+# 🚀 Usage
+
+## 1. Prepare Environment
 
 Install Python dependencies:
 
@@ -13,7 +14,7 @@ mkdir -p data
 
 Provide connection details in config.ini (see config.example.ini).
 
-##2. Fetch logs from OpenSearch
+## 2. Fetch logs from OpenSearch
 
 Run:
 
@@ -23,7 +24,7 @@ python scripts/get_prodsyslogs.py
 This creates a CSV file (e.g., data/prodsyslogs.csv) containing flattened logs.
 Service columns are removed, and dataset names are parsed into additional fields.
 
-##3. Analyze logs
+## 3. Analyze logs
 
 Open the notebook:
 
@@ -34,7 +35,7 @@ Generates Excel reports split by data formats
 
 Provides visualizations of dataset activity
 
-##4. Merge DEFT requests
+## 4. Merge DEFT requests
 
 Run:
 
@@ -49,17 +50,17 @@ Merges them with staged datasets from prodsys logs
 
 Produces a combined CSV in data/
 
-##5. Dataset parsing
+## 5. Dataset parsing
 
 The DatasetParsing module:
 
 Parses dataset names into structured columns:
 
-origin (mc, data, valid)
-
-year, energy, and units
-
-production step, format, AMI tags, root task ID
+    -- origin (mc, data, valid)
+    
+    -- year, energy, and units
+    
+    -- production step, format, AMI tags, root task ID
 
 Can be reused inside scripts or notebooks.
 
@@ -70,7 +71,7 @@ from DatasetParsing.hep_dataset_parser import HEPDatasetParser
 parser = HEPDatasetParser()
 df = parser.parse_dataset_column(df, column_name="dataset")
 
-##📝 Notes
+## 📝 Notes
 
 All raw and intermediate data is stored in data/ (ignored by git).
 
